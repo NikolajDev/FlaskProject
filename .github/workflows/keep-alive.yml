@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Send HTTP request to Render
         run: |
-          curl -I https://tvoja-aplikacia.onrender.com/
+          curl -I https://flaskproject-raab.onrender.com/
