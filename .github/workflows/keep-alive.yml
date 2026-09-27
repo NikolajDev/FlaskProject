@@ -1,0 +1,16 @@
+name: Keep Render Alive
+
+on:
+  schedule:
+    # Spustí sa každých 14 minút, aby sa Render neuspel (Render uspáva po 15 minútach)
+    - cron: '*/14 * * * *'
+  # Umožní ti to spustiť to aj manuálne záložkou "Actions" na Githube
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send HTTP request to Render
+        run: |
+          curl -I https://tvoja-aplikacia.onrender.com/
