@@ -3,7 +3,7 @@ name: Keep Render Alive
 on:
   schedule:
     # Spustí sa každých 14 minút, aby sa Render neuspel (Render uspáva po 15 minútach)
-    - cron: '*/14 * * * *'
+    - cron: '*/5 * * * *'
   # Umožní ti to spustiť to aj manuálne záložkou "Actions" na Githube
   workflow_dispatch:
 
